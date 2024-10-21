@@ -10,7 +10,7 @@ const Blogs = () => {
   }, []);
   console.log(blogs);
   return (
-    <div>
+    <div className="w-full md:w-8/12 border-2">
       <h2>Blogs</h2>
     </div>
   );

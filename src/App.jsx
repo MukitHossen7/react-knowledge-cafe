@@ -1,9 +1,10 @@
 import "./App.css";
+import Headers from "./components/Headers/Headers";
 
 function App() {
   return (
     <>
-      <h1 className="text-4xl">React</h1>
+      <Headers></Headers>
     </>
   );
 }

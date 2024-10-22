@@ -1,4 +1,5 @@
-const Blog = ({ blog }) => {
+import { CiBookmark } from "react-icons/ci";
+const Blog = ({ blog, handleBookmark }) => {
   const {
     cover,
     author_img,
@@ -10,7 +11,7 @@ const Blog = ({ blog }) => {
   } = blog;
   return (
     <div>
-      <div>
+      <div className="border-b pb-6 pt-6">
         <div>
           <img
             src={cover}
@@ -25,10 +26,13 @@ const Blog = ({ blog }) => {
               <span className="text-xs text-slate-400">{posted_date}</span>
             </div>
           </div>
-          <div>
+          <div className="flex items-center gap-2">
             <span className="text-lg font-medium text-slate-400">
               {reading_time} min read
             </span>
+            <button className="text-xl" onClick={() => handleBookmark(blog)}>
+              <CiBookmark />
+            </button>
           </div>
         </div>
         <h2 className="text-4xl font-bold pt-4">{title}</h2>
@@ -43,7 +47,7 @@ const Blog = ({ blog }) => {
             </span>
           ))}
         </p>
-        <span className="underline underline-offset-2 text-[#6047EC] font-medium text-lg">
+        <span className="underline underline-offset-2 text-[#6047EC] font-medium text-lg ">
           Mark as read
         </span>
       </div>

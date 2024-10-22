@@ -1,5 +1,5 @@
 import { CiBookmark } from "react-icons/ci";
-const Blog = ({ blog, handleBookmark }) => {
+const Blog = ({ blog, handleBookmark, handleTimer }) => {
   const {
     cover,
     author_img,
@@ -48,7 +48,9 @@ const Blog = ({ blog, handleBookmark }) => {
           ))}
         </p>
         <span className="underline underline-offset-2 text-[#6047EC] font-medium text-lg ">
-          Mark as read
+          <button onClick={() => handleTimer(reading_time)}>
+            Mark as read
+          </button>
         </span>
       </div>
     </div>

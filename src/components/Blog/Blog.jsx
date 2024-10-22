@@ -8,6 +8,7 @@ const Blog = ({ blog, handleBookmark, handleTimer }) => {
     posted_date,
     title,
     hashtags,
+    id,
   } = blog;
   return (
     <div>
@@ -48,7 +49,7 @@ const Blog = ({ blog, handleBookmark, handleTimer }) => {
           ))}
         </p>
         <span className="underline underline-offset-2 text-[#6047EC] font-medium text-lg ">
-          <button onClick={() => handleTimer(reading_time)}>
+          <button onClick={() => handleTimer(reading_time, id)}>
             Mark as read
           </button>
         </span>

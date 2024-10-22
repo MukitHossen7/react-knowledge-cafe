@@ -12,9 +12,9 @@ const Blogs = ({ handleBookmark, handleTimer }) => {
 
   return (
     <div className="w-full md:w-8/12 ">
-      {blogs.map((blog) => (
+      {blogs.map((blog, idx) => (
         <Blog
-          key={blog.id}
+          key={idx}
           blog={blog}
           handleBookmark={handleBookmark}
           handleTimer={handleTimer}

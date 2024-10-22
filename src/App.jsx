@@ -11,8 +11,13 @@ function App() {
     const newBookMark = [...bookmarks, markBlog];
     setBookmarks(newBookMark);
   };
-  const handleTimer = (time) => {
+  const handleTimer = (time, id) => {
     setTimes(times + time);
+    console.log(id);
+    const remainingBookMark = bookmarks.filter(
+      (bookmark) => bookmark.id !== id
+    );
+    setBookmarks(remainingBookMark);
   };
   return (
     <div className="w-11/12 mx-auto">
